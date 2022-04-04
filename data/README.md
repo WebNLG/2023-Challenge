@@ -2,6 +2,8 @@
 
 We provide rough training data automatically translated from the original 2020 English set into the 3 target languages via a multilingual [NMT system](https://github.com/bzhangGo/zero/tree/master/docs/multilingual_laln_lalt). We also provide dev sets that have been manually translated into each target language by human translators.
 
+The [benchmark reader](../utils) can be used to load and parse these datasets.
+
 Language codes are as follows:
 * Breton - `br`
 * Welsh - `cy`
