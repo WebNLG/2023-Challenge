@@ -12,4 +12,4 @@ Language codes are as follows:
 
 The Breton development set (`br_dev.xml`) contains 1399 entries from the WebNLG 2020 English dev set that have each had one lexicalisation manually translated to Breton. These entries were randomly sampled while making sure to cover lexicalisations from all triple set size groups.
 
-The development sets for the remaining languages each contain 1665 manually translated entries from the WebNLG 2020 English dev set (entries 485 and 807 have been excluded).
+The development sets for the remaining languages each contain 1665 manually translated entries from the WebNLG 2020 English dev set (entries 485 and 808 have been excluded).
