@@ -6109,23 +6109,6 @@
       <lex comment="good" lang="" lid="Id3">Steve Bruce is the manager of Hull City AFC, where one of the players is Abel Hernández.</lex>
       <lex comment="" lang="mt" lid="Id4">Abel Hernandez jilgħab ma’ Hull City AFC li huma mmexxija minn Steve Bruce.</lex>
     </entry>
-    <entry category="Building" eid="485" shape="(X (X (X)))" shape_type="chain" size="2">
-      <originaltripleset>
-        <otriple>11_Diagonal_Street | location | South_Africa</otriple>
-        <otriple>South_Africa | ethnicGroups | Coloured</otriple>
-      </originaltripleset>
-      <originaltripleset>
-        <otriple>11_Diagonal_Street | location | South_Africa</otriple>
-        <otriple>South_Africa | ethnicGroup | Coloured</otriple>
-      </originaltripleset>
-      <modifiedtripleset>
-        <mtriple>11_Diagonal_Street | location | South_Africa</mtriple>
-        <mtriple>South_Africa | ethnicGroup | Coloured</mtriple>
-      </modifiedtripleset>
-      <lex comment="good" lang="" lid="Id1">11 Diagonal Street is in South Africa. One South African group is the Coloured.</lex>
-      <lex comment="good" lang="" lid="Id2">The address, 11 Diagonal Street is located in South Africa which is home to some coloured people.</lex>
-      <lex comment="" lang="mt" lid="Id3">11 Diagonal Street tinstab fl-Afrika t'Isfel. Grupp wieħed mill-Afrika t'Isfel huwa l-Persuni ta' Kulur.</lex>
-    </entry>
     <entry category="Building" eid="486" shape="(X (X) (X))" shape_type="sibling" size="2">
       <originaltripleset>
         <otriple>200_Public_Square | location | Cleveland</otriple>
@@ -11377,22 +11360,6 @@
       <lex comment="good" lang="" lid="Id2">South Africa is the location of 11 Diagonal Street. The capital is Cape Town and the leader is Cyril Ramaphosa.</lex>
       <lex comment="good" lang="" lid="Id3">Cyril Ramaphosa leads South Africa, whose capital, Cape Town, houses 11 Diagonal Street.</lex>
       <lex comment="" lang="mt" lid="Id4">11 Diagonal Street tinstab fl-Afrika t'Isfel (Cyril Ramaphosa huwa wieħed mill-mexxejja), li l-kapitali tagħha hija Cape Town.</lex>
-    </entry>
-    <entry category="Building" eid="808" shape="(X (X (X) (X)))" shape_type="mixed" size="3">
-      <originaltripleset>
-        <otriple>11_Diagonal_Street | location | South_Africa</otriple>
-        <otriple>South_Africa | leaderName | Jacob_Zuma</otriple>
-        <otriple>South_Africa | ethnicGroup | Coloured</otriple>
-      </originaltripleset>
-      <modifiedtripleset>
-        <mtriple>11_Diagonal_Street | location | South_Africa</mtriple>
-        <mtriple>South_Africa | leader | Jacob_Zuma</mtriple>
-        <mtriple>South_Africa | ethnicGroup | Coloured</mtriple>
-      </modifiedtripleset>
-      <lex comment="good" lang="" lid="Id1">11 Diagonal Street is located in South Africa, a country in which coloureds are one of the ethnic groups and Jacob Zuma is the leader.</lex>
-      <lex comment="good" lang="" lid="Id2">11 Diagonal Street is located in South Africa, populated by Coloured people and led by Jacob Zuma.</lex>
-      <lex comment="good" lang="" lid="Id3">The address, 11 Diagonal Street is located in South Africa where Jacob Zuma is a leader and some coloured people live.</lex>
-      <lex comment="" lang="mt" lid="Id4">11 Diagonal Street tinstab fl-Afrika t'Isfel, pajjiż li fih il-persuni ta' kulur huma wieħed mill-gruppi etniċi u Jacob Zuma huwa l-mexxej.</lex>
     </entry>
     <entry category="Building" eid="809" shape="(X (X (X) (X)))" shape_type="mixed" size="3">
       <originaltripleset>

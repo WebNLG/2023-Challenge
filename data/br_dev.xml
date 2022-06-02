@@ -7711,23 +7711,6 @@
       <lex comment="good" lang="" lid="Id1">The leader of Japan is Tarō Asō.</lex>
       <lex comment="good" lang="br" lid="Id1">Tarō Asō zo e penn ar Japan.</lex>
     </entry>
-    <entry category="Building" eid="431" shape="(X (X (X)))" shape_type="chain" size="2">
-      <originaltripleset>
-        <otriple>11_Diagonal_Street | location | South_Africa</otriple>
-        <otriple>South_Africa | ethnicGroups | Coloured</otriple>
-      </originaltripleset>
-      <originaltripleset>
-        <otriple>11_Diagonal_Street | location | South_Africa</otriple>
-        <otriple>South_Africa | ethnicGroup | Coloured</otriple>
-      </originaltripleset>
-      <modifiedtripleset>
-        <mtriple>11_Diagonal_Street | location | South_Africa</mtriple>
-        <mtriple>South_Africa | ethnicGroup | Coloured</mtriple>
-      </modifiedtripleset>
-      <lex comment="good" lang="" lid="Id1">11 Diagonal Street is in South Africa. One South African group is the Coloured.</lex>
-      <lex comment="good" lang="" lid="Id2">The address, 11 Diagonal Street is located in South Africa which is home to some coloured people.</lex>
-      <lex comment="good" lang="br" lid="Id1">En Afrika ar Su emañ 11 Diagonal Street. An Duarded eo unan eus strolladoù kenelel Afrika ar Su.</lex>
-    </entry>
     <entry category="Building" eid="432" shape="(X (X) (X))" shape_type="sibling" size="2">
       <originaltripleset>
         <otriple>200_Public_Square | location | Cleveland</otriple>
@@ -8056,22 +8039,6 @@
       <lex comment="good" lang="" lid="Id2">South Africa is the location of 11 Diagonal Street. The capital is Cape Town and the leader is Cyril Ramaphosa.</lex>
       <lex comment="good" lang="" lid="Id3">Cyril Ramaphosa leads South Africa, whose capital, Cape Town, houses 11 Diagonal Street.</lex>
       <lex comment="good" lang="br" lid="Id1">En Afrika ar Su, hag a zo Cape Town he c'hêrbenn, (lec'h m'emañ Cyril Ramaphosa unan eus ar renerien), emañ 11 Diagonal Street.</lex>
-    </entry>
-    <entry category="Building" eid="454" shape="(X (X (X) (X)))" shape_type="mixed" size="3">
-      <originaltripleset>
-        <otriple>11_Diagonal_Street | location | South_Africa</otriple>
-        <otriple>South_Africa | leaderName | Jacob_Zuma</otriple>
-        <otriple>South_Africa | ethnicGroup | Coloured</otriple>
-      </originaltripleset>
-      <modifiedtripleset>
-        <mtriple>11_Diagonal_Street | location | South_Africa</mtriple>
-        <mtriple>South_Africa | leader | Jacob_Zuma</mtriple>
-        <mtriple>South_Africa | ethnicGroup | Coloured</mtriple>
-      </modifiedtripleset>
-      <lex comment="good" lang="" lid="Id1">11 Diagonal Street is located in South Africa, a country in which coloureds are one of the ethnic groups and Jacob Zuma is the leader.</lex>
-      <lex comment="good" lang="" lid="Id2">11 Diagonal Street is located in South Africa, populated by Coloured people and led by Jacob Zuma.</lex>
-      <lex comment="good" lang="" lid="Id3">The address, 11 Diagonal Street is located in South Africa where Jacob Zuma is a leader and some coloured people live.</lex>
-      <lex comment="good" lang="br" lid="Id1">11 Diagonal Street zo en Afrika ar Su, ur vro m'emañ an Duarded unan eus ar strolladoù kenelel enni ha Jacob Zuma ar rener.</lex>
     </entry>
     <entry category="Building" eid="455" shape="(X (X (X) (X)))" shape_type="mixed" size="3">
       <originaltripleset>
