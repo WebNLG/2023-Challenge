@@ -9,7 +9,7 @@ Before running evaluation, you must have a number of dependencies installed on y
 The `eval.py` script can be used to perform automatic evaluation of system outputs. The following example illustrates a potential use-case:
 
 ```bash
-python eval.py -hyp outputs/baselines/forge2017_en2br_test.br -ref breton_test.txt -nr 2 -m bleu,meteor,chrf++,ter,bert -lng br
+python eval.py -hyp outputs/baselines/forge2017_en2br_test.br -ref breton_test.txt -nr 1 -m bleu,meteor,chrf++,ter,bert -lng br
 ```
 
 ```
