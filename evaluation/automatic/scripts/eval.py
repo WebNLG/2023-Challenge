@@ -107,7 +107,8 @@ def parse(refs_path, hyps_path, num_refs, lng='en'):
 def sacrebleu_score(references, hypothesis, num_refs):
     refs = []
     for i in range(num_refs):
-        refs.append([ref[i] for ref in references])
+        # allow for variable number of references per example
+        refs.append([ref[i] if len(ref) >= i else None for ref in references])
 
     bleu = BLEU()
     return bleu.corpus_score(hypothesis, refs).score
