@@ -60,7 +60,7 @@ from sacrebleu.metrics import BLEU
 BLEU_PATH = 'metrics/multi-bleu-detok.perl'
 METEOR_PATH = 'metrics/meteor-1.5/meteor-1.5.jar'
 
-BERT_LANGS = ["br", "en", "ga", "ru"]
+BERT_LANGS = ["br", "cy", "en", "ga", "ru"]
 METEOR_LANGS = ["en", "ru"]
 
 
