@@ -8,7 +8,7 @@ Language codes are as follows:
 * Irish - `ga`
 * Maltese - `mt`
 
-We also provide optional silber training data that has been automatically translated into the 4 target languages from the original English set via a multilingual [NMT system](https://github.com/bzhangGo/zero/tree/master/docs/multilingual_laln_lalt).
+We also provide optional silver training data that has been automatically translated into the 4 target languages from the original English set via a multilingual [NMT system](https://github.com/bzhangGo/zero/tree/master/docs/multilingual_laln_lalt).
 
 The [benchmark reader](../utils) can be used to load and parse these datasets.
 
