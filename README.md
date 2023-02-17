@@ -1,1 +1,1 @@
-# WebNLG 2022 Challenge
+# WebNLG 2023 Challenge
