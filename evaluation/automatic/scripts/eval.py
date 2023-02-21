@@ -4,9 +4,8 @@ __author__='thiagocastroferreira,liamcripwell'
 Author: Organizers of the 3rd WebNLG Challenge
 Date: 21/02/2023
 Description:
-    This script aims to evaluate the output of data-to-text NLG models by 
-    computing popular automatic metrics such as BLEU (two implementations), 
-    METEOR, chrF++, TER and BERT-Score.
+    This script aims to evaluate the output of data-to-text NLG models by computing 
+    popular automatic metrics such as BLEU, METEOR, chrF++, TER and BERT-Score.
     
     ARGS:
         usage: eval.py [-h] -R REFERENCE -H HYPOTHESIS [-lng LANGUAGE] [-nr NUM_REFS]
@@ -37,7 +36,6 @@ Description:
             python3 eval.py -R data/ru/reference -H data/ru/hypothesis -lng ru -nr 1 -m bleu,meteor,chrf++,ter,bert
 """
 
-import sys
 import argparse
 import codecs
 import copy
@@ -51,13 +49,10 @@ import re
 from bert_score import score
 from metrics.chrF import computeChrF
 from metrics.bleurt.bleurt import score as bleurt_score
-#sys.argv = sys.argv[:1]
-from nltk.translate.bleu_score import corpus_bleu, SmoothingFunction
 from razdel import tokenize
 from tabulate import tabulate
 from sacrebleu.metrics import BLEU
 
-BLEU_PATH = 'metrics/multi-bleu-detok.perl'
 METEOR_PATH = 'metrics/meteor-1.5/meteor-1.5.jar'
 
 BERT_LANGS = ["br", "cy", "en", "ga", "ru"]
@@ -104,6 +99,7 @@ def parse(refs_path, hyps_path, num_refs, lng='en'):
     print('FINISHING TO PARSE INPUTS...')
     return references, references_tok, hypothesis, hypothesis_tok
 
+
 def sacrebleu_score(references, hypothesis, num_refs):
     refs = []
     for i in range(num_refs):
@@ -112,41 +108,6 @@ def sacrebleu_score(references, hypothesis, num_refs):
 
     bleu = BLEU()
     return bleu.corpus_score(hypothesis, refs).score
-
-def bleu_score(refs_path, hyps_path, num_refs):
-    logging.info('STARTING TO COMPUTE BLEU...')
-    print('STARTING TO COMPUTE BLEU...')
-    ref_files = []
-    for i in range(num_refs):
-        if num_refs == 1:
-            ref_files.append(refs_path)
-        else:
-            ref_files.append(refs_path + str(i))
-
-    command = 'perl {0} {1} < {2}'.format(BLEU_PATH, ' '.join(ref_files), hyps_path)
-    result = subprocess.check_output(command, shell=True)
-    try:
-        bleu = float(re.findall('BLEU = (.+?),', str(result))[0])
-    except:
-        logging.error('ERROR ON COMPUTING METEOR. MAKE SURE YOU HAVE PERL INSTALLED GLOBALLY ON YOUR MACHINE.')
-        print('ERROR ON COMPUTING METEOR. MAKE SURE YOU HAVE PERL INSTALLED GLOBALLY ON YOUR MACHINE.')
-        bleu = -1
-    logging.info('FINISHING TO COMPUTE BLEU...')
-    print('FINISHING TO COMPUTE BLEU...')
-    return bleu
-
-
-def bleu_nltk(references, hypothesis):
-    # check for empty lists
-    references_, hypothesis_ = [], []
-    for i, refs in enumerate(references):
-        refs_ = [ref for ref in refs if ref.strip() != '']
-        if len(refs_) > 0:
-            references_.append([ref.split() for ref in refs_])
-            hypothesis_.append(hypothesis[i].split())
-
-    chencherry = SmoothingFunction()
-    return corpus_bleu(references_, hypothesis_, smoothing_function=chencherry.method3)
 
 
 def meteor_score(references, hypothesis, num_refs, lng='en'):
@@ -301,14 +262,8 @@ def run(refs_path, hyps_path, num_refs, lng='en', metrics='bleu,meteor,chrf++,te
     
     logging.info('STARTING EVALUATION...')
     if 'bleu' in metrics:
-        bleu = bleu_score(refs_path, hyps_path, num_refs)
-        result['bleu'] = bleu
-
-        b = bleu_nltk(references_tok, hypothesis_tok)
-        result['bleu_nltk'] = b
-
-        sbleu = sacrebleu_score(references, hypothesis, num_refs)
-        result["sacrebleu"] = sbleu
+        bleu = sacrebleu_score(references, hypothesis, num_refs)
+        result["bleu"] = bleu
     if 'meteor' in metrics:
         meteor = meteor_score(references_tok, hypothesis_tok, num_refs, lng=lng)
         result['meteor'] = meteor
@@ -364,14 +319,8 @@ def main():
     metrics = metrics.lower().split(',')
     headers, values = [], []
     if 'bleu' in metrics:
-        headers.append('BLEU')
+        headers.append("BLEU")
         values.append(result['bleu'])
-
-        headers.append('BLEU NLTK')
-        values.append(round(result['bleu_nltk'], 2))
-
-        headers.append("SACREBLEU")
-        values.append(result['sacrebleu'])
     if 'meteor' in metrics:
         headers.append('METEOR')
         values.append(round(result['meteor'], 2))
