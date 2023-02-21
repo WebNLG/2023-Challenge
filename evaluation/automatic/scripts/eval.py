@@ -1,8 +1,8 @@
-__author__='thiagocastroferreira'
+__author__='thiagocastroferreira,liamcripwell'
 
 """
-Author: Organizers of the 2nd WebNLG Challenge
-Date: 23/04/2020
+Author: Organizers of the 3rd WebNLG Challenge
+Date: 21/02/2023
 Description:
     This script aims to evaluate the output of data-to-text NLG models by 
     computing popular automatic metrics such as BLEU (two implementations), 
