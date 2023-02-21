@@ -1,5 +1,7 @@
 # Data
 
+## Development Data
+
 We provide versions of the original 2020 English development set which have been manually translated into each of the 4 new target language by human translators. We also include the Russian data from the previous challenge, which was automatically translated with manual post-editing.
 
 Language codes are as follows:
@@ -8,6 +10,8 @@ Language codes are as follows:
 * Irish - `ga`
 * Maltese - `mt`
 * Russian - `ru`
+
+## Silver Training Data
 
 We also provide optional silver training data that has been automatically translated into the 4 new target languages from the original English set via a multilingual [NMT system](https://github.com/bzhangGo/zero/tree/master/docs/multilingual_laln_lalt).
 
