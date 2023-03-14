@@ -4,6 +4,9 @@ The new edition of WebNLG focuses on four under-resourced languages which are se
 
 For WebNLG 2023, we are soliciting submissions encompassing a variety of approaches to automatic text generation, from neural architectures to rule-based systems. We especially encourage submissions addressing generation in few-shot or zero-shot settings.
 
+## Registration
+If you intend to participate in the challenge or download the data, please [fill in this form](https://docs.google.com/forms/d/e/1FAIpQLSfytc1rUMUOKrDc9vV658uiLh1_jUS7G0XesylaOLrfDYqXBA/viewform?usp=pp_url) 👍
+
 ## Data
 Development and test data is now available for all 5 languages, namely Breton, Maltese, Irish and Welsh (the target languages for WebNLG 2023), as well as Russian. Participants can download the development data; the test data will be reserved for the final evaluation.
 
