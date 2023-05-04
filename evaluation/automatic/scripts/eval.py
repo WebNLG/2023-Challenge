@@ -249,7 +249,7 @@ def bleurt(references, hypothesis, num_refs, checkpoint = "metrics/bleurt/bleurt
             refs.append(ref)
 
     scorer = bleurt_score.BleurtScorer(checkpoint)
-    scores = scorer.score(refs, cands)
+    scores = scorer.score(references=refs, candidates=cands)
     scores = [max(scores[i:i+num_refs]) for i in range(0, len(scores), num_refs)]
     return round(sum(scores) / len(scores), 2)
 
