@@ -238,6 +238,7 @@ def bert_score_(references, hypothesis, lng='en'):
         P = float(sum(P) / len(P))
         R = float(sum(R) / len(R))
     except:
+        print("BERTScore calculation failed... setting to default value of 0.")
         P, R, F1 = 0, 0, 0
     return P, R, F1
 
