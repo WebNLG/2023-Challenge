@@ -104,7 +104,7 @@ def sacrebleu_score(references, hypothesis, num_refs):
     refs = []
     for i in range(num_refs):
         # allow for variable number of references per example
-        refs.append([ref[i] if len(ref) >= i else None for ref in references])
+        refs.append([ref[i] if len(ref) >= i and ref[i].strip() != "" else None for ref in references])
 
     bleu = BLEU()
     return bleu.corpus_score(hypothesis, refs).score
@@ -258,7 +258,7 @@ def bleurt(references, hypothesis, num_refs, checkpoint = "metrics/bleurt/bleurt
 def run(refs_path, hyps_path, num_refs, lng='en', metrics='bleu,meteor,chrf++,ter,bert,bleurt',ncorder=6, nworder=2, beta=2):
     metrics = metrics.lower().split(',')
     references, references_tok, hypothesis, hypothesis_tok = parse(refs_path, hyps_path, num_refs, lng)
-    
+
     result = {}
     
     logging.info('STARTING EVALUATION...')
